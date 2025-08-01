@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Study Simplifier</title>
+  <script src="script.js" defer></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-6">
+  <div class="max-w-3xl w-full bg-white p-6 rounded-2xl shadow-lg">
+    <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">📚 Study Simplifier</h1>
+
+    <label for="inputText" class="block text-lg font-semibold mb-2">Paste your study material:</label>
+    <textarea id="inputText" rows="6" class="w-full p-3 border border-gray-300 rounded-xl mb-4" placeholder="e.g., Newton's Laws of Motion..."></textarea>
+
+    <label for="simplifyType" class="block text-lg font-semibold mb-2">Choose Simplification Method:</label>
+    <select id="simplifyType" class="w-full p-3 border border-gray-300 rounded-xl mb-6">
+      <option value="rhyme">🎵 Rhyme / Song</option>
+      <option value="mnemonic">🧠 Mnemonic</option>
+      <option value="summary">📝 Summary</option>
+    </select>
+
+    <button onclick="simplifyText()" class="w-full bg-blue-600 text-white py-3 rounded-xl text-lg font-semibold hover:bg-blue-700 transition duration-300">
+      Simplify
+    </button>
+
+    <div id="outputContainer" class="mt-6 hidden">
+      <h2 class="text-xl font-semibold mb-2 text-green-700">✅ Simplified Output:</h2>
+      <div id="output" class="bg-green-50 text-gray-800 p-4 rounded-xl whitespace-pre-wrap"></div>
+    </div>
+  </div>
+</body>
+</html>
